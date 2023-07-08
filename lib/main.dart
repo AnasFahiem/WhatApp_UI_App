@@ -13,24 +13,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: Color.fromARGB(255, 19, 21, 20),
-        useMaterial3: true,
+        scaffoldBackgroundColor: const Color.fromARGB(255, 19, 21, 20),
+        // useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 118, 186, 220)!,
+          seedColor: const Color.fromARGB(255, 118, 186, 220),
           brightness: Brightness.dark,
           primary: Colors.blueGrey[900]!,
-          secondary: Color.fromARGB(255, 20, 80, 110)!,
-          surface: const Color.fromARGB(255, 3, 100, 148)!,
+          secondary: Color.fromARGB(255, 4, 187, 160),
+          surface: const Color.fromARGB(255, 3, 100, 148),
         ),
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.blueGrey[900],
           foregroundColor: Colors.white,
-          titleTextStyle: TextStyle(
-            color: Colors.white60,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-          iconTheme: IconThemeData(
+          iconTheme: const IconThemeData(
             color: Colors.white,
           ),
         ),
@@ -38,9 +33,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       home: HomeBage(),
       debugShowCheckedModeBanner: false,
-      // routes:{
-      //   NewItem.routeName: (context) => const NewItem(),
-      // } ,
+      // routes: {
+      //   HomeBage.routeName: (context) => const HomeBage(),
+      //   Status.routeName: (context) => const Status(),
+      //   Calls.routeName: (context) => const Calls(),
+      // },
     );
   }
 }
