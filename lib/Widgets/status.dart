@@ -33,7 +33,7 @@ class Status extends StatelessWidget {
           ),
           ListView.builder(
               shrinkWrap: true,
-              itemCount: 5,
+              itemCount: 15,
               itemBuilder: (context, index) {
                 return StatusTile(
                     name: "me",

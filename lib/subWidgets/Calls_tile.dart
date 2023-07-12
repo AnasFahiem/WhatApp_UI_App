@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
-class StatusTile extends StatelessWidget {
-  StatusTile({super.key, required this.name, required this.time});
+class CallsTile extends StatelessWidget {
+  CallsTile({super.key, required this.name, required this.time});
   String name;
   String time;
 
@@ -14,7 +14,15 @@ class StatusTile extends StatelessWidget {
         backgroundColor: Colors.grey,
       ),
       title: Text(name),
-      subtitle: Text("Today,${time}"),
+      subtitle: Row(
+        children: [
+          Icon(
+            Icons.call_made,
+            color: Colors.green,
+          ),
+          Text("Today,${time}"),
+        ],
+      ),
     );
   }
 }
